@@ -55,7 +55,7 @@ class RenameCanonImagesCommand extends Command
 	private function renameImages(string $path)
 	{
 		$this->path = $path;
-		$iterator = new DirectoryIterator($this->path);
+		$iterator   = new DirectoryIterator($this->path);
 		
 		foreach ($iterator as $file) {
 			if ($file->isDot()) {
@@ -72,8 +72,15 @@ class RenameCanonImagesCommand extends Command
 				continue;
 			}
 			
-			$exif_data = read_exif_data($file->getFileName());
-			$date      = new DateTime($exif_data['DateTimeDigitized']);
+			$exif_data = read_exif_data($this->createFullPath($file->getFileName()));
+			
+			$time_str = $exif_data['DateTimeDigitized'] ?? null;
+			
+			if ($time_str === null) {
+				continue;
+			}
+			
+			$date = new DateTime($exif_data['DateTimeDigitized']);
 			
 			$fileName = $file->getFileName();
 			

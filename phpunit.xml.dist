@@ -6,6 +6,11 @@
          backupGlobals="false"
          colors="true"
          bootstrap="config/bootstrap.php"
+         stopOnError="false"
+         stopOnFailure="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         stopOnRisky="false"
 >
     <php>
         <ini name="error_reporting" value="-1" />

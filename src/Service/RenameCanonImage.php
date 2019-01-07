@@ -17,7 +17,7 @@ class RenameCanonImage
 	 */
 	public function handle(string $canon_name, string $file_ext, DateTime $date)
 	{
-		if (false === strpos($canon_name, 'IMG') || 'jpg' !== $file_ext) {
+		if (false === strpos($canon_name, 'IMG_') || 'jpg' !== $file_ext) {
 			return false;
 		}
 		
