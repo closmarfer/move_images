@@ -2,9 +2,10 @@
 
 
 use App\Service\RenameCanonImage;
+use App\Service\RenameWhatsappImage;
 use Symfony\Bundle\FrameworkBundle\Tests\TestCase;
 
-class RenameCanonImageTest extends TestCase
+class RenameWhatsappImageTest extends TestCase
 {
 	/**
 	 * @param array $params
@@ -13,7 +14,8 @@ class RenameCanonImageTest extends TestCase
 	 */
 	public function testHandle(array $params, array $expected)
 	{
-		$service = new RenameCanonImage();
+
+		$service = new RenameWhatsappImage();
 		
 		$result = $service->handle(
 			$params['img'],
@@ -27,9 +29,19 @@ class RenameCanonImageTest extends TestCase
 	public function dataTestProvider()
 	{
 		return [
-			"Valid Canon Name" => [
+			"Valid Whatsapp Name" => [
 				"params"   => [
-					"img"  => "IMG_23_345.JPG",
+					"img"  => "IMG-20160624-WA0002.jpg",
+					"ext"  => "jpg",
+					"date" => new DateTime('2018-07-12 15:23:56'),
+				],
+				"expected" => [
+					"result" => '2018-07-12 15.23.56.jpg'
+				],
+			],
+			"Valid Whatsapp Name 2" => [
+				"params"   => [
+					"img"  => "IMG-20160624-WA0003.jpeg",
 					"ext"  => "jpg",
 					"date" => new DateTime('2018-07-12 15:23:56'),
 				],
