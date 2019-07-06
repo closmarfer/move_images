@@ -2,8 +2,11 @@
     "doctrine/instantiator": {
         "version": "1.1.0"
     },
-    "facebook/webdriver": {
-        "version": "1.6.0"
+    "hamcrest/hamcrest-php": {
+        "version": "v2.0.0"
+    },
+    "mockery/mockery": {
+        "version": "1.2.2"
     },
     "myclabs/deep-copy": {
         "version": "1.8.1"
@@ -164,9 +167,6 @@
     "symfony/http-kernel": {
         "version": "v4.2.1"
     },
-    "symfony/panther": {
-        "version": "v0.2.0"
-    },
     "symfony/phpunit-bridge": {
         "version": "4.1",
         "recipe": {
@@ -178,12 +178,6 @@
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.10.0"
-    },
-    "symfony/polyfill-php72": {
-        "version": "v1.10.0"
-    },
-    "symfony/process": {
-        "version": "v4.2.2"
     },
     "symfony/routing": {
         "version": "4.2",
