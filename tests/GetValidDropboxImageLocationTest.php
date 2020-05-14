@@ -2,7 +2,7 @@
 
 use App\Service\GetValidDropboxImageLocation;
 use Mockery as m;
-use Symfony\Bundle\FrameworkBundle\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class GetValidDropboxImageLocationTest extends TestCase

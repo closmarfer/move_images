@@ -2,7 +2,7 @@
 
 
 use App\Service\RenameCanonImage;
-use Symfony\Bundle\FrameworkBundle\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class RenameCanonImageTest extends TestCase
 {

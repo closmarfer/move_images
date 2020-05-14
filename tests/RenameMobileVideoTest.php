@@ -3,7 +3,7 @@
 
 use App\Service\RenameCanonImage;
 use App\Service\RenameMobileVideo;
-use Symfony\Bundle\FrameworkBundle\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class RenameMobileVideoTest extends TestCase
 {

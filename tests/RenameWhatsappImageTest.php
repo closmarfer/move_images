@@ -3,7 +3,7 @@
 
 use App\Service\RenameCanonImage;
 use App\Service\RenameWhatsappImage;
-use Symfony\Bundle\FrameworkBundle\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class RenameWhatsappImageTest extends TestCase
 {
