@@ -5,8 +5,6 @@ namespace App\Command;
 
 
 use App\Service\GetValidDropboxImageLocation;
-use App\Service\RenameCanonImage;
-use DateTime;
 use DirectoryIterator;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -30,10 +28,6 @@ class OrderDropboxImagesCommand extends Command
 	 * @var OutputInterface
 	 */
 	private $output;
-	/**
-	 * @var RenameCanonImage
-	 */
-	private $renameCanonImage;
 	/**
 	 * @var GetValidDropboxImageLocation
 	 */
@@ -109,7 +103,7 @@ class OrderDropboxImagesCommand extends Command
 	{
 		$dir_path = dirname($destination);
 		if(!is_dir($dir_path)){
-			mkdir($dir_path);
+			mkdir($dir_path, 0777, true);
 		}
 	}
 }
