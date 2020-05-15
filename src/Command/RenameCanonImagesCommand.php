@@ -41,7 +41,9 @@ class RenameCanonImagesCommand extends Command
 	
 	public function configure()
 	{
-		$this->addArgument("path", InputArgument::REQUIRED);
+		$this
+			->setDescription('Renames images using photo metadata')
+			->addArgument("path", InputArgument::REQUIRED);
 	}
 	
 	public function execute(InputInterface $input, OutputInterface $output)

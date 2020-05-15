@@ -25,7 +25,7 @@ class RenameWhatsappImagesCommand extends Command
 	 */
 	private $output;
 	/**
-	 * @var RenameCanonImage
+	 * @var RenameWhatsappImage
 	 */
 	private $renameWhatsappImage;
 	
@@ -42,7 +42,9 @@ class RenameWhatsappImagesCommand extends Command
 	
 	public function configure()
 	{
-		$this->addArgument("path", InputArgument::REQUIRED);
+		$this
+			->setDescription('Rename images of Whatsapp format (WA---')
+			->addArgument("path", InputArgument::REQUIRED);
 	}
 	
 	public function execute(InputInterface $input, OutputInterface $output)
@@ -57,7 +59,7 @@ class RenameWhatsappImagesCommand extends Command
 	{
 		$this->path = $path;
 		$iterator   = new DirectoryIterator($this->path);
-		$duplicated = 0;
+		
 		foreach ($iterator as $file) {
 			if ($file->isDot()) {
 				continue;

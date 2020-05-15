@@ -53,7 +53,9 @@ class OrderDropboxImagesCommand extends Command
 	
 	public function configure()
 	{
-		$this->addArgument("path", InputArgument::OPTIONAL);
+		$this
+			->setDescription('Moves dropbox named images from original folder to destiny folder (images with name yyyy-mm-dd hh:mm:ss')
+			->addArgument("path", InputArgument::OPTIONAL);
 	}
 	
 	public function execute(InputInterface $input, OutputInterface $output)
