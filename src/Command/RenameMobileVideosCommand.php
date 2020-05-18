@@ -42,7 +42,7 @@ class RenameMobileVideosCommand extends Command
 	{
 		
 		$this
-			->setDescription('Moves dropbox named images from original folder to destiny folder (images with name yyyy-mm-dd hh:mm:ss')
+			->setDescription('Renames mobile videos which name has format "Ymd_His"')
 			->addArgument("path", InputArgument::REQUIRED);
 	}
 	
